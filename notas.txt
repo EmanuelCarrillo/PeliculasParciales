@@ -4,3 +4,15 @@ drawer= barra lateral izquierda
 home= muestra imagenes
 listpeliculas = muestra peliculas y cosas
 selectfield = filtrar
+
+
+list peliculas el handleopen
+ en los actions esta
+
+peliculas actions estan en los metodos detallados 
+en list peliculas se estaran llamando estos metodos.
+
+
+en list peliculas estaran para mostrar la info
+en las 3 variables se estan almacenando los datos
+

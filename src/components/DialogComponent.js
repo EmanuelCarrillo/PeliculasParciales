@@ -10,7 +10,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { fetchCatalogs } from "../services/urls";
 const DialogComponent = (props) => {
-  console.log(props);
   return (
     <div>
       {props.detallePelicula && (
@@ -34,7 +33,8 @@ const DialogComponent = (props) => {
                 component="img"
                 height="300px"
                 image={fetchCatalogs.fetchImage(
-                  props.detallePelicula.poster_path || props.detallePelicula.backdrop_path
+                  props.detallePelicula.poster_path ||
+                    props.detallePelicula.backdrop_path
                 )}
                 alt="image"
               />
@@ -46,11 +46,16 @@ const DialogComponent = (props) => {
                 >
                   {props.detallePelicula.title || props.detallePelicula.name}
                 </Typography>
-                
+
                 <Typography gutterBottom>
                   {props.detallePelicula.overview}
                 </Typography>
-               
+                <Typography gutterBottom style={{ fontWeight: "bold" }}>
+                  Fecha de lanzamiendo:
+                </Typography>
+                <Typography gutterBottom>
+                  {props.detallePelicula.release_date}
+                </Typography>
               </CardContent>
             </Card>
           </DialogContent>

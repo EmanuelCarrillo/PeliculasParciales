@@ -7,8 +7,7 @@ import {
 } from "../store/actions/peliculas.actions";
 import { useDispatch, useSelector } from "react-redux";
 import SelectField from "./SelectField";
-import { Typography, Pagination, Stack, IconButton, Grid } from "@mui/material";
-import { Backspace } from "@mui/icons-material";
+import { Typography, Pagination, Grid } from "@mui/material";
 import CardInfo from "./CardInfo";
 import DialogComponent from "./DialogComponent";
 
@@ -36,10 +35,7 @@ const ListPelicula = () => {
     setGenero(e.target.value);
   };
 
-  const clearData = () => {
-    setGenero("");
-    setPage(1);
-  };
+  
 
   const handleOpen = (id) => {
     dispatch(retrieveDetail(fetchCatalogs.fetchDetail(id)));
@@ -57,7 +53,7 @@ const ListPelicula = () => {
       }}
     >
       <Typography
-        style={{ marginTop: "5%", marginTop: "5%", fontWeight: "bold" }}
+        style={{ marginTop: "5%", fontWeight: "bold" }}
         variant="h4"
       >
         Buscador de Películas
