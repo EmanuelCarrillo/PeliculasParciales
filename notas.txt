@@ -1,0 +1,6 @@
+cardinfo = miniaturas
+dialogcomp = cuadro de informacion detalles
+drawer= barra lateral izquierda
+home= muestra imagenes
+listpeliculas = muestra peliculas y cosas
+selectfield = filtrar
