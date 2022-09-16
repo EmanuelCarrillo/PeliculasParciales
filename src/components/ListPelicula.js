@@ -57,40 +57,29 @@ const ListPelicula = () => {
       }}
     >
       <Typography
-        style={{ marginTop: "5%", marginBottom: "1%", fontWeight: "bold" }}
+        style={{ marginTop: "5%", marginTop: "5%", fontWeight: "bold" }}
         variant="h4"
       >
-        Catalogo de peliculas
+        Buscador de Películas
       </Typography>
 
-      <div style={{ width: "50%" }}>
-        <Stack direction="row" spacing={2}>
-          <SelectField
-            id="genero"
-            name="genero"
-            onChange={handleSelectChange}
-            variant="outlined"
-            label="Genero"
-            opciones={generos}
-            value={genero}
-          />
-          <IconButton variant="outlined" onClick={clearData}>
-            <Backspace />
-          </IconButton>
-        </Stack>
+      <div style={{ marginTop: "1%", marginBottom: "1%", width: "50%" }}>
+        <SelectField
+          id="genero"
+          name="genero"
+          onChange={handleSelectChange}
+          variant="outlined"
+          label="Genero"
+          opciones={generos}
+          value={genero}
+        />
       </div>
-      <Pagination
-        count={10}
-        page={page}
-        onChange={handleChange}
-        style={{ margin: "1%" }}
-      />
 
       <Grid container spacing={2} style={{ width: "80%" }}>
         {peliculas &&
           peliculas.map((item, key) => {
             return (
-              <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Grid item xs={12} sm={6} md={4}>
                 <CardInfo
                   key={key}
                   item={item}
@@ -101,6 +90,14 @@ const ListPelicula = () => {
             );
           })}
       </Grid>
+      <Pagination
+        variant="outlined"
+        shape="rounded"
+        count={10}
+        page={page}
+        onChange={handleChange}
+        style={{ margin: "1%" }}
+      />
       <DialogComponent
         open={open}
         handleClose={() => setOpen(false)}

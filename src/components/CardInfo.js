@@ -36,7 +36,7 @@ const CardInfo = (props) => {
             display: "-webkit-box",
             overflow: "hidden",
             WebkitBoxOrient: "vertical",
-            WebkitLineClamp: 5,
+            WebkitLineClamp: 3,
           }}
           variant="body2"
           color="text.secondary"
@@ -45,7 +45,7 @@ const CardInfo = (props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={props.handleOpen}>Ver más</Button>
+        <Button onClick={props.handleOpen}>Más información</Button>
       </CardActions>
     </Card>
   );

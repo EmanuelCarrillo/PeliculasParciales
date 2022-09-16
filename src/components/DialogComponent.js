@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { fetchCatalogs } from "../services/urls";
 const DialogComponent = (props) => {
+  console.log(props);
   return (
     <div>
       {props.detallePelicula && (
@@ -23,7 +24,7 @@ const DialogComponent = (props) => {
             }}
           >
             <DialogTitle variant="h5" style={{ fontWeight: "bold" }}>
-              Detalle de la pelicula:
+              Información de la pelicula
             </DialogTitle>
           </div>
 
@@ -33,7 +34,7 @@ const DialogComponent = (props) => {
                 component="img"
                 height="300px"
                 image={fetchCatalogs.fetchImage(
-                  props.detallePelicula.poster_path
+                  props.detallePelicula.poster_path || props.detallePelicula.backdrop_path
                 )}
                 alt="image"
               />
@@ -45,29 +46,11 @@ const DialogComponent = (props) => {
                 >
                   {props.detallePelicula.title || props.detallePelicula.name}
                 </Typography>
-                <Typography gutterBottom style={{ fontWeight: "bold" }}>
-                  Descripción:
-                </Typography>
+                
                 <Typography gutterBottom>
                   {props.detallePelicula.overview}
                 </Typography>
-                <Typography gutterBottom style={{ fontWeight: "bold" }}>
-                  Fecha de lanzamiendo:
-                </Typography>
-                <Typography gutterBottom>
-                  {props.detallePelicula.release_date}
-                </Typography>
-                <Typography gutterBottom style={{ fontWeight: "bold" }}>
-                  Géneros:
-                </Typography>
-                {props.detallePelicula &&
-                  props.detallePelicula.genres.map((item, index) => {
-                    return (
-                      <Typography key={index} gutterBottom>
-                        {item.name}
-                      </Typography>
-                    );
-                  })}
+               
               </CardContent>
             </Card>
           </DialogContent>

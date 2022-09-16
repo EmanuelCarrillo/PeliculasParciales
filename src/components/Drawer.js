@@ -15,7 +15,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+import TheatersIcon from "@mui/icons-material/Theaters";
 import { useHistory } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -101,10 +101,9 @@ export default function MiniDrawer() {
   const navigateToHome = () => {
     history.push("/inicio");
   };
-  const navigateToListarPelicula= () => {
+  const navigateToListarPelicula = () => {
     history.push("/listar");
   };
-
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -142,15 +141,15 @@ export default function MiniDrawer() {
         <List>
           <ListItem button onClick={navigateToHome}>
             <ListItemIcon>
-              <InboxIcon />
+              <TheatersIcon />
             </ListItemIcon>
             <ListItemText primary={"Inicio"} />
           </ListItem>
           <ListItem button onClick={navigateToListarPelicula}>
             <ListItemIcon>
-              <InboxIcon />
+              <TheatersIcon />
             </ListItemIcon>
-            <ListItemText primary={"Listar peliculas"} />
+            <ListItemText primary={"Catálogo películas"} />
           </ListItem>
         </List>
       </Drawer>

@@ -1,4 +1,4 @@
-const API_KEY = "261d4171f0097e5f7430ec82c43f6e0e";
+const API_KEY = "cb36dc3d6640b396ab9c82df16c15bf5";
 
 export const fetchCatalogs = {
   fetchTrending: (page) =>

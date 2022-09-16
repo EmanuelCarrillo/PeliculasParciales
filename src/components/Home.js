@@ -7,12 +7,11 @@ const Home = () => {
       style={{
         display: "flex",
         height: "100vh",
-        backgroundColor: "blue",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" style={{width:"950px"}} />
     </div>
   );
 };
