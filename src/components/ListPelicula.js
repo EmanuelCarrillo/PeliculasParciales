@@ -29,6 +29,7 @@ const ListPelicula = () => {
   useEffect(() => {
     dispatch(retrievePeliculas(fetchCatalogs.fetchTrending(page), genero));
     dispatch(retrieveGeneros(fetchCatalogs.fetchGenres));
+   
   }, [dispatch, genero, page]);
 
   const handleSelectChange = (e) => {

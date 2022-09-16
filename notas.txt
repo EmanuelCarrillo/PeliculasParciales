@@ -5,7 +5,6 @@ home= muestra imagenes
 listpeliculas = muestra peliculas y cosas
 selectfield = filtrar
 
-
 list peliculas el handleopen
  en los actions esta
 

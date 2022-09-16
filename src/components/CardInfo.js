@@ -9,7 +9,7 @@ import { fetchCatalogs } from "../services/urls";
 
 const CardInfo = (props) => {
   return (
-    <Card sx={{ height: "400px" }}>
+    <Card sx={{ height: "370px" }}>
       <CardMedia
         component="img"
         height="175px"
