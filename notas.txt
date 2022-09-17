@@ -15,3 +15,6 @@ en list peliculas se estaran llamando estos metodos.
 en list peliculas estaran para mostrar la info
 en las 3 variables se estan almacenando los datos
 
+
+
+
